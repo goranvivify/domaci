@@ -1,0 +1,17 @@
+{
+    "myOrganizationEditNameInput": ".organization-list-item.vs-c-my-organization .vs-c-my-organization__title",
+    "deleteMyOrganizationButton": "span[title='Archive Organization']",
+    "cancelDeleteMyOrganizationButton": "button[name='cancel-btn']",
+    "confirmDeleteMyOrganizationButton": "button[name='save-btn']",
+    "addNewProjectButton": ".vs-c-my-organization__list.vs-c-my-organization__projects > li[title='Add new Project']",
+    "addNewBoardButton": ".vs-c-my-organization__boards.vs-c-my-organization__list > li[title='Add new Board']",
+    "myOrganizationPanelBody": "div[class='vs-c-my-organization__body']",
+    "addNewOrganization": "div[class='vs-c-my-organization vs-c-my-organization--add-new not-sortable']",
+    "newOrganizationNameInput": "input[name='name']",
+    "cancelNewOrganizationCreation": "button[name='prev_btn']",
+    "closeNewOrganizationCreationOnX": "button[name='close-new-board-modal-btn'] > .el-icon-close",
+    "buttonNext": "button[name='next_btn']",
+    "uploadOrganizationLogoButton": "a[class='vs-c-btn vs-c-btn--rounded']",
+    "buttonPrevious": ".dialog-footer > button[name='prev_btn']",
+    "createOrganizationButtonFinal": ".dialog-footer > button[name='next_btn']"
+}

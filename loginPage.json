@@ -1,0 +1,12 @@
+{
+    "emailInput": "input[name='email']",
+    "passwordInput": "input[type='password']",
+    "forgotPasswordLink": "a[href='/forgot-password']",
+    "loginButton": "button[type='submit']",
+    "backToHomeButton": "a[href='https://cypress-api.vivifyscrum-stage.com']",
+    "googleLoginButton": "button[class='vs-c-btn vs-c-btn--social-auth vs-c-btn--gp disabled']",
+    "facebookLoginButton": "button[class='vs-c-btn vs-c-btn--social-auth vs-c-btn--fb']",
+    "twitterLoginButton": "button[class='vs-c-btn vs-c-btn--social-auth vs-c-btn--tw']",
+    "regzenLoginButton": "button[class='vs-c-btn vs-c-btn--social-auth vs-c-btn--regzen']",
+    "signUpButton": "a[href='https://cypress-api.vivifyscrum-stage.com/pricing']"
+}

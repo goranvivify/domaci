@@ -1,0 +1,29 @@
+{
+    "sideNav": {
+        "boardsButton": "div[class='vs-c-organization-boards__item--add-new']",
+        "projectsButton": "div[class='vs-c-organization-boards__item--add-new']",
+        "invoicingButton": "li:nth-of-type(3) > span > div > .vs-c-site-logo",
+        "clientsButton": "li:nth-of-type(4) > span > div > .vs-c-site-logo",
+        "worklogsButton": "li:nth-of-type(5) > span > div > .vs-c-site-logo",
+        "teamManagementButton": "li:nth-of-type(5) > span > div > .vs-c-site-logo",
+        "reportsButton": "li:nth-of-type(7) > span > div > .vs-c-site-logo",
+        "configurationButton": "li:nth-of-type(8) > span > div > .vs-c-site-logo"
+    },
+    "topNav": {
+        "importButton": ".vs-c-btn.vs-c-btn--default.vs-c-btn--spaced.vs-c-btn--spaced-sm.vs-u-color--base > span",
+        "addNewBoardButton": "button[class='vs-c-btn vs-c-btn--primary vs-c-btn--spaced vs-c-btn--spaced-sm vs-c-btn--spaced-no-icon vs-u-text--uppercase']"
+    },
+    "addNewBoard": "div[class='vs-c-organization-boards__item--add-new']",
+    "newBoardCreatePanel": {
+        "organizationDropDownMenu": "button[class='vs-c-btn vs-c-btn--primary vs-c-btn--spaced vs-c-btn--spaced-sm vs-c-btn--spaced-no-icon vs-u-text--uppercase']",
+        "organizationDropDownMenuChoiceOne": ".el-scrollbar__view.el-select-dropdown__list > li:nth-of-type(1)",
+        "organizationDropDownMenuChoiceTwo": ".el-scrollbar__view.el-select-dropdown__list > li:nth-of-type(2)",
+        "boardTitleNameInput": "input[name='name']",
+        "cancelButton": ".dialog-footer > button[name='prev_btn']",
+        "nextButton": ".dialog-footer > button[name='prev_btn']",
+        "chooseSrcumCheck": "span[name='type_scrum']",
+        "chooseKanban": "span[name='type_kanban']",
+        "uploadBoardLogo": ".vs-c-btn.vs-c-btn--rounded-square.vs-u-width--full",
+        "closeButtonX": "button[name='close-new-board-modal-btn'] > .el-icon-close"
+    }
+}

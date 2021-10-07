@@ -1,0 +1,16 @@
+{
+    "chooseStarter": ".vsp-c-pricing-plan-list.vsp-c-pricing-plan-list--annual > li:nth-of-type(1) > a[title='Starter']",
+    "backToPricingLink": ".vs-c-auth-modal__body-text.vs-u-font-lg.vs-u-gap--left-sm.vs-u-text--uppercase",
+    "selectMonthly": ".vs-c-switch-pricing-plan-list > div:nth-of-type(1) > p",
+    "selectAnnually": ".vs-c-switch-pricing-plan-list > div:nth-of-type(2) > p",
+    "emailInput": "input[data-vv-as='email']",
+    "passwordInput": "input[data-vv-as='password']",
+    "showPasswordButton": ".vs-c-btn--icon.vs-u-color--modal-body-text",
+    "confirmCheckBox": "span[class='vs-c-checkbox-check']",
+    "startTrialButton": ".vs-c-btn.vs-c-btn--lg.vs-c-btn--primary.vs-c-btn--spaced.vs-c-btn-auth--top-gap.vs-u-font-md.vs-u-font-weight-bold.vs-u-font-weight-regular",
+    "signUpGoogleButton": ".vs-c-btn.vs-c-btn--lg.vs-c-btn--primary.vs-c-btn--spaced.vs-c-btn-auth--top-gap.vs-u-font-md.vs-u-font-weight-bold.vs-u-font-weight-regular",
+    "signUpFacebookButton": ".vs-c-btn.vs-c-btn--fb.vs-c-btn--social-auth",
+    "signUpTwitterButton": ".vs-c-btn.vs-c-btn--social-auth.vs-c-btn--tw",
+    "signUpRegzen": ".vs-c-btn.vs-c-btn--social-auth.vs-c-btn--tw",
+    "linkToLogIn": ".vs-c-btn.vs-c-btn--link > .vs-c-auth-modal__bottom-text-main.vs-u-text--uppercase"
+}
