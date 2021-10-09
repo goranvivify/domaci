@@ -1,0 +1,12 @@
+{
+    "collapseSidebar": "p[class='vs-c-sidebar-info']",
+    "addNewMenuOnHover": ".el-tooltip.vs-c-list-btn--new-workspace.vs-c-list__btn > span",
+    "addOrganizationButtonOnHover": "div:nth-of-type(8)  .vs-c-list > li:nth-of-type(1) > a > span",
+    "addBoardButtonOnHover": "div:nth-of-type(8)  .vs-c-list > li:nth-of-type(1) > a > span",
+    "importBoardFromButtonOnHover": "div:nth-of-type(8)  .vs-c-list > li:nth-of-type(1) > a > span",
+    "showHideOrganizations": "button[class='vs-c-btn vs-c-btn--link vs-c-btn--sm vs-c-list__caret']",
+    "myOrganizationExpandButton": ".vs-c-list__btn.vs-c-list__organisation > span > span",
+    "addNewBoradButton": ".vs-c-list__btn.vs-c-list__organisation > span > span",
+    "addBoardOnHoverButton": "div:nth-of-type(8)  .vs-c-list span",
+    "myAccountButton": "span[class='el-dropdown-link']"
+}
