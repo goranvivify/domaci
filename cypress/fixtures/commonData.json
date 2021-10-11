@@ -1,0 +1,11 @@
+{
+    "negativeData": {
+        "onlySpaces": "    ",
+        "scriptCodeInjection": "<script onmouseover=alert('Wufff!')>click me!</script>",
+        "tooLongString1001": "7EGJsNpdyo76lpoQECg8FF0Sd5UKfruUn1FnNBZAMVAGDwvzT3R7IzhE7uBkSX0crBYlzhSffzJmYDVkgnoSqzIKsBORdn0AL10vtayHovxgrDphxwWJ32BbPEb3thpSY8XkYgCs1bMe1L9DZU9TYUUbXLJiHh5YcV23jfWfhALOogKGw3QKB34WSw779SdXQ1wt3CsQ99RNu5iICr7GsdmZITWX8NriD8228LAlSKpD6gLzujH56LOdHNPHWcCWOOl4nHrFO7Ecof92ssCUwVOAGfKcTnBmWoqHn1O7LeI5PHsvypxVDAM0LyoNfRZkd2bo3yo6hQhIkXpUVthwoAJshEwEW5wJ6tWw1AmcLZ6S1WEXRoQo73BOBX4AuMtBALicpBWaKyUGI0XGcw2AJhn1W6RizhOjMQ5OaTaPft51nxPZeTaeL18c0dvVk72BZhL88GiTKjfTUbAlkfANtTWbZBsFtglngUyI1UfhcH9qb0l7l3UOnsQpig1nJb4bS2ZRo1ikrg9px5CjHM3EGhUF6HiA9EYLkbfLEVos9GiVdtE4d0w6D3ojHL70fgLauaKSUdUk5LVdQZ2g3Jrl1QZlnaXTD33st9RWJ93El7pt2Kgo5dZC4qb0dgMedjS5KwPPeqK0wUjJF0xbk43k2qRsu3dtkALgI8Estm3oLIKm1HlPI7vw1q6jqRFDz05zNMW4ai3wu7mGpBEAh4vgJYfsNCqoYU1GnpqBjPG8DqBM2qg3edg9Vtbvt7S4aSTY0jbdFUShaKFn67i4H5chbr0kQSA12K2es561AX65xXdMC53WssLInbyfCMHeYrvTliwTLajRwdfufSyMZGBxWmkU7iQRFr4cZmAe1YVMKCe2oYGglp19ghLjDCleTNZnaEo5atIo1X4Ji9zULXDmseHDgJHohr0wySdBUllM3leahVswHKgsXXePH3OgPLdEy3c2cYLtghlKPRX0cqjlNsFvXZ9nfF011cfehsdfO"
+    },
+    "validData": {
+        "testName": "TEST NAME",
+        "editedName": "EDITED TEST NAME"
+    }
+}

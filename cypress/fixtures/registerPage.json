@@ -4,7 +4,7 @@
     "selectMonthly": ".vs-c-switch-pricing-plan-list > div:nth-of-type(1) > p",
     "selectAnnually": ".vs-c-switch-pricing-plan-list > div:nth-of-type(2) > p",
     "emailInput": "input[data-vv-as='email']",
-    "passwordInput": "input[data-vv-as='password']",
+    "passwordInput": "div:nth-of-type(2) > .el-form-item__content > .el-input > input:nth-of-type(1)",
     "showPasswordButton": ".vs-c-btn--icon.vs-u-color--modal-body-text",
     "confirmCheckBox": "span[class='vs-c-checkbox-check']",
     "startTrialButton": ".vs-c-btn.vs-c-btn--lg.vs-c-btn--primary.vs-c-btn--spaced.vs-c-btn-auth--top-gap.vs-u-font-md.vs-u-font-weight-bold.vs-u-font-weight-regular",
@@ -12,5 +12,6 @@
     "signUpFacebookButton": ".vs-c-btn.vs-c-btn--fb.vs-c-btn--social-auth",
     "signUpTwitterButton": ".vs-c-btn.vs-c-btn--social-auth.vs-c-btn--tw",
     "signUpRegzen": ".vs-c-btn.vs-c-btn--social-auth.vs-c-btn--tw",
-    "linkToLogIn": ".vs-c-btn.vs-c-btn--link > .vs-c-auth-modal__bottom-text-main.vs-u-text--uppercase"
+    "linkToLogIn": ".vs-c-btn.vs-c-btn--link > .vs-c-auth-modal__bottom-text-main.vs-u-text--uppercase",
+    "numberOfUsers": "input[name='number_of_users']"
 }

@@ -8,5 +8,5 @@
     "myOrganizationExpandButton": ".vs-c-list__btn.vs-c-list__organisation > span > span",
     "addNewBoradButton": ".vs-c-list__btn.vs-c-list__organisation > span > span",
     "addBoardOnHoverButton": "div:nth-of-type(8)  .vs-c-list span",
-    "myAccountButton": "span[class='el-dropdown-link']"
+    "myAccountButton": "li:nth-of-type(4) > span > div > .vs-c-site-logo"
 }

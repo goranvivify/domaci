@@ -1,0 +1,3 @@
+{
+    "logoutBtn": ".vs-c-btn.vs-c-btn--danger.vs-c-btn--link > span"
+}

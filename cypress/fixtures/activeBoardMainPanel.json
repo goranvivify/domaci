@@ -13,14 +13,15 @@
         "importButton": ".vs-c-btn.vs-c-btn--default.vs-c-btn--spaced.vs-c-btn--spaced-sm.vs-u-color--base > span",
         "addNewBoardButton": "button[class='vs-c-btn vs-c-btn--primary vs-c-btn--spaced vs-c-btn--spaced-sm vs-c-btn--spaced-no-icon vs-u-text--uppercase']"
     },
-    "addNewBoard": "div[class='vs-c-organization-boards__item--add-new']",
+    "addNewBoard": ".vs-c-media__object > .vs-c-img--avatar > span",
     "newBoardCreatePanel": {
-        "organizationDropDownMenu": "button[class='vs-c-btn vs-c-btn--primary vs-c-btn--spaced vs-c-btn--spaced-sm vs-c-btn--spaced-no-icon vs-u-text--uppercase']",
+        "organizationDropDownMenu": ".el-icon-caret-top.el-input__icon",
         "organizationDropDownMenuChoiceOne": ".el-scrollbar__view.el-select-dropdown__list > li:nth-of-type(1)",
         "organizationDropDownMenuChoiceTwo": ".el-scrollbar__view.el-select-dropdown__list > li:nth-of-type(2)",
         "boardTitleNameInput": "input[name='name']",
         "cancelButton": ".dialog-footer > button[name='prev_btn']",
-        "nextButton": ".dialog-footer > button[name='prev_btn']",
+        "nextButton": ".dialog-footer > button[name='next_btn']",
+        "backButton": ".dialog-footer > button[name='prev_btn']",
         "chooseSrcumCheck": "span[name='type_scrum']",
         "chooseKanban": "span[name='type_kanban']",
         "uploadBoardLogo": ".vs-c-btn.vs-c-btn--rounded-square.vs-u-width--full",
