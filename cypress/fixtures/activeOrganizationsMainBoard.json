@@ -7,7 +7,7 @@
     "cancelDeleteMyOrganizationButton": "button[name='cancel-btn']",
     "confirmDeleteMyOrganizationButton": "button[name='save-btn']",
     "addNewProjectButton": ".vs-c-my-organization__list.vs-c-my-organization__projects > li[title='Add new Project']",
-    "addNewBoardButton": ".vs-c-img--avatar.vs-c-img--board-avatar > span",
+    "addNewBoardButton": ".vs-c-organization-boards__item--add-new",
     "myOrganizationPanelBody": "div[class='vs-c-my-organization__body']",
     "addNewOrganization": ".vs-c-my-organization--add-new .vs-c-my-organization__avatar",
     "newOrganizationNameInput": "input[name='name']",
@@ -22,5 +22,15 @@
     "editOrganizationNameInput": "input[name='change-organization-name']",
     "confirmOrgNameEdit": "button[name='change-organization-name'] > .el-icon-check",
     "boardInfoPanelOkButton": ".vs-c-modal--features-button > .vs-c-btn",
-    "sideNavChooseFirstOrganization": ".li:nth-of-type(1) .vs-c-list__btn.vs-c-list__organisation > span > span"
+    "sideNavChooseFirstOrganization": ".li:nth-of-type(1) .vs-c-list__btn.vs-c-list__organisation > span > span",
+    "sideNav": {
+        "boards": "li:nth-child(1) > span > div > a",
+        "projects": "li:nth-child(2) > span > div > a",
+        "invoicing": "li:nth-child(3) > span > div > a",
+        "clients": "li:nth-child(4) > span > div > a",
+        "worklogs": "li:nth-child(5) > span > div > a",
+        "teamManagement": "li:nth-child(6) > span > div > a",
+        "reports": "li:nth-child(7) > span > div > a",
+        "configuration": "li:nth-child(8) > span > div > a"
+    }
 }

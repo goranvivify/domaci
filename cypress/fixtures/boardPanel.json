@@ -1,0 +1,60 @@
+{
+    "sideNav": {
+        "productBacklog": "a[class='vs-c-site-logo router-link-exact-active router-link-active']",
+        "stats": ":nth-child(2) > span > div > .vs-c-site-logo,",
+        "history": ":nth-child(3) > span > div > .vs-c-site-logo",
+        "labels": ":nth-child(4) > span > div > .vs-c-site-logo",
+        "files": ":nth-child(5) > span > div > .vs-c-site-logo",
+        "documents": ":nth-child(6) > span > div > .vs-c-site-logo",
+        "worklogs": ":nth-child(7) > span > div > .vs-c-site-logo",
+        "teamMembers": ":nth-child(8) > span > div > .vs-c-site-logo",
+        "trash": ":nth-child(9) > span > div > .vs-c-site-logo",
+        "configureBoard": ":nth-child(10) > span > div > .vs-c-site-logo"
+    },
+    "configureBoardMenu": {
+        "details": "div.el-tabs__item.is-active.is-disabled > div",
+        "settings": "div.el-tabs__nav-scroll > div > div:nth-child(3) > div",
+        "hotkeys": "div.el-tabs__nav-scroll > div > div:nth-child(4) > div",
+        "integrations": "div.el-tabs__nav-scroll > div > div:nth-child(5) > div"
+    },
+    "backlogColumn": {
+        "threeDotsMenu": ".not-sortable.vs-c-col > .vs-c-col__head > .vs-u-actions > .vs-c-dropdown-wrapper > .vs-c-btn.vs-c-btn--link.vs-c-btn--sm",
+        "exportBacklog": ".vs-c-dropdown-item-column-limit",
+        "addNewTaskTop": "button[class='vs-add-new-task vs-c-btn vs-c-btn--themify-secondary vs-c-btn--round vs-c-btn--sm']",
+        "addNewTaskBottom": "button[class='vs-add-new-task vs-c-btn vs-c-btn--themify-secondary vs-c-btn--round vs-c-btn--sm vs-c-task-card__not-selectable']",
+        "emptyColumnBody": ".not-sortable.vs-c-col > .vs-c-task-list.vs-is-empty",
+        "emptyColumnAddNewTaskButton": ".not-sortable.vs-c-col > .vs-c-task-list.vs-is-empty > .vs-add-new-task.vs-c-btn.vs-c-btn--round.vs-c-btn--sm.vs-c-btn--themify-primary"
+    },
+    "firstBacklogTask": {
+        "taskHeader": "div[class='vs-c-task-card__header']",
+        "typeOfTask": "span[class='vs-c-task-card-task-type__icon-inner vs-u-task--story']",
+        "editItemTitle": "a[class='vs-c-task-card__not-selectable vs-task-card__title-edit']",
+        "managePerformers": "div[class='vs-c-new-assignee-icon vs-u-img--round']",
+        "assignTaskToMyself": "div:nth-child(1) > div > div.vs-c-assignee-wrapper > div > span.el-dropdown-link.vs-c-avatar > img",
+        "shareTask": "div:nth-of-type(3) > div[title='Share']",
+        "moveTask": "div:nth-of-type(2) > div[title='Move']",
+        "labels": "div:nth-of-type(1) > div[title='Labels']",
+        "events": "div:nth-of-type(6) > div[title='Events']",
+        "checklists": "div:nth-of-type(5) > div[title='Checklists']",
+        "subitems": ".vs-c-controls.vs-c-task-card__not-selectable > div[title='Subitems']",
+        "priority": "a[class='vs-c-task-card__not-selectable vs-c-controls vs-c-controls--priority']",
+        "files": ".vs-c-controls.vs-c-controls--files.vs-c-task-card__not-selectable > div[title='Files']",
+        "comments": ".vs-c-controls.vs-c-controls--comments.vs-c-task-card__not-selectable > div[title='Comments']",
+        "estimation": "div[title='Estimation'] > .vs-c-dropdown-value.vs-u-value",
+        "readMore": "a[class='vs-c-task-card__not-selectable vs-task-card__title-read-more-link vs-c-table-icon-lighten']",
+        "footer": ".vs-c-item-card__footer",
+        "moreTaskOptions": {
+            "threeDotsMoreButton": "div:nth-of-type(4) > div[title='More']",
+            "openItemInNewTab": ".vs-c-task-dropdown__body > a:nth-of-type(1) > span",
+            "delete": "a:nth-of-type(2) > span",
+            "confirmDelete": "button[name='save-btn']",
+            "cancelDelete": "button[name='cancel-btn']",
+            "clone": "a:nth-of-type(3) > span",
+            "mirrorItemToAnotherBoard": "a:nth-of-type(4) > span",
+            "moveToTop": "a:nth-of-type(5) > span",
+            "showRelatedItems": "a:nth-of-type(6) > span",
+            "addToPredefinedItems": "a:nth-of-type(7) > span",
+            "moveToAnotherBoard": "a:nth-of-type(8) > span"
+        }
+    }
+}

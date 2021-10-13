@@ -1,0 +1,18 @@
+{
+    "registerAndLoginPage": {
+        "email": {
+            "validEmail": "The email field must be a valid email"
+        },
+        "password": {
+            "atLeast5Characters": "The password field must be at least 5 characters",
+            "passwordRequired": "The password field is required"
+        },
+        "numberOfUsers": {
+            "mustBeInteger": "The number of users field must be an integer",
+            "from1to10": "The number of users must be between 1 and 10"
+        },
+        "terms": {
+            "agreeToTerms": "The agree to terms and privacy policy field is required"
+        }
+    }
+}

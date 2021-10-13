@@ -1,0 +1,12 @@
+{
+    "registerPage": {
+        "email": "div:nth-child(1) > div.vs-c-form-item__error-wrapper > span",
+        "password": "div:nth-child(2) > div.vs-c-form-item__error-wrapper > span",
+        "numberOfUsers": "div:nth-child(3) > div.vs-c-form-item__error-wrapper > span",
+        "terms": "div:nth-child(4) > div.vs-c-form-item__error-wrapper > span"
+    },
+    "loginPage": {
+        "email": "div:nth-child(1) > div.vs-c-form-item__error-wrapper > span",
+        "password": "div:nth-child(2) > div.vs-c-form-item__error-wrapper > span"
+    }
+}

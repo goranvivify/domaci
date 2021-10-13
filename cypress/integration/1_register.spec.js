@@ -84,11 +84,9 @@ describe("Register new user", () => {
     });
   });
   context("Password input test", () => {
-    it("only spaces in password", () => {
+    it("empty password", () => {
       cy.get(registerPage.emailInput).clear().type(data.newUser.newEmailValid);
-      cy.get(registerPage.passwordInput)
-        .clear()
-        .type(data.negativData.password.onlySpacesPassword);
+      cy.get(registerPage.passwordInput).clear();
       cy.get(registerPage.numberOfUsers)
         .clear()
         .type(data.newUser.numberOfUsersValid);
@@ -175,6 +173,15 @@ describe("Register new user", () => {
       cy.get(registerPage.startTrialButton).click();
     });
   });
+  context("All input fileds empty", () => {
+    it("empty input fileds", () => {
+      cy.get(registerPage.emailInput).clear();
+      cy.get(registerPage.passwordInput).clear();
+      cy.get(registerPage.numberOfUsers).clear();
+      cy.get(registerPage.startTrialButton).click();
+    });
+  });
+  // Valid register is skipped
   context("Valid register", () => {
     it.skip("register new user", () => {
       cy.get(registerPage.emailInput).clear().type(data.newUser.newEmailValid);
