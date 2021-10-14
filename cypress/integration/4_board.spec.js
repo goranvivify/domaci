@@ -57,10 +57,10 @@ context("New board", () => {
       });
       cy.get(activeBoardMainPanel.newBoardCreatePanel.backButton).click();
     });
-    it("1001 character in name", () => {
+    it("257 character in name", () => {
       cy.get(activeBoardMainPanel.newBoardCreatePanel.boardTitleNameInput)
         .clear()
-        .type(commonData.negativeData.tooLongString1001);
+        .type(commonData.negativeData.tooLongString257);
       cy.get(activeBoardMainPanel.newBoardCreatePanel.nextButton).click({
         force: true,
       });
@@ -137,6 +137,7 @@ context("New board", () => {
       cy.get(activeOrganizationMainBoard.sideNav.configuration).click({
         force: true,
       });
+      cy.wait(1000);
       cy.get(organizationSettingsMenu.delete).click();
       cy.get(organizationSettingsMenu.confirmDeleteInput)
         .clear()

@@ -23,10 +23,10 @@ describe("Test of Organizations", () => {
         .type(commonData.negativeData.onlySpaces);
       cy.get(activeOrganizationMainBoard.buttonNext).click({ force: true });
     });
-    it("1001 character in new organization name input", () => {
+    it("257 character in new organization name input", () => {
       cy.get(activeOrganizationMainBoard.newOrganizationNameInput)
         .clear()
-        .type(commonData.negativeData.tooLongString1001);
+        .type(commonData.negativeData.tooLongString257);
       cy.get(activeOrganizationMainBoard.buttonNext).click();
       if (activeOrganizationMainBoard.buttonPrevious != "disabled") {
         cy.get(activeOrganizationMainBoard.buttonPrevious).click({
@@ -35,9 +35,6 @@ describe("Test of Organizations", () => {
       }
     });
     it("script code in new organization name input", () => {
-      // if (activeOrganizationMainBoard.boardInfoPanelOkButton != "disabled") {
-      //   cy.get(activeOrganizationMainBoard.boardInfoPanelOkButton).click();
-      // }
       cy.get(activeOrganizationMainBoard.newOrganizationNameInput)
         .clear()
         .type(commonData.negativeData.scriptCodeInjection);

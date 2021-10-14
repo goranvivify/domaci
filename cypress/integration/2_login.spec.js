@@ -4,7 +4,7 @@ import data from "../fixtures/data.json";
 import sidebar from "../fixtures/sidebar.json";
 import navigation from "../fixtures/navigation.json";
 import myAccountPage from "../fixtures/myAccountPage.json";
-describe("First Cypress block", () => {
+describe("Login tests", () => {
   context("Email input test", () => {
     it("visit login page", () => {
       cy.visit("/");

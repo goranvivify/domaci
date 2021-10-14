@@ -5,5 +5,5 @@
         "confirmDelete": "div.vs-c-modal__footer > div > button[type='button'].el-button.el-button--success"
     },
     "infoPanelAppearsFromNowhereOkButton": ".vs-c-modal--features-button > .vs-c-btn",
-    "_comment": "Much more to come here!!!"
+    "comment": "Much more to come here!!!"
 }

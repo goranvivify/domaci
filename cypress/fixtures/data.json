@@ -22,7 +22,7 @@
             "nonValidPassword": "test1234",
             "upperCaseLetterSwitchPassword": "Pobra11",
             "oneLetterPassword": "g",
-            "password256Characters": "oosAxPTlLNUNJ5v4HGdnL8WGAUW0C6FHBiFVYIjJXULBNne6cRThWbZI2cRaqXdUo9iv8qnMXNJnHONtrCrUlycHfvcYGxkz3t29oR0GuobTj9BNOtY2ev9MCzmVKaCbpdd6Hf6reS6Zcb09AWLq7ZnV0nLje2VT9EMurwjr2ehYctPzcOrYaauynrOnfjo8CLQjEWeSBhHbE9ijWem2OgRmtidvR97BRxNDkC6xj8izXwRN2aA2PUX7C1cRgpNV",
+            "password101Characters": "l2yF2ng90394uzQ9eP1oIDCSvpVDkKg6GWdGbMaiDVICSyR19gtmMqL5BNif8sg1jMEpThUPfvG6qiC8PNmWr0UOpsGnayKQby9L4",
             "FourCharactersPassword": "1234"
         },
         "numberOfUsers": {
