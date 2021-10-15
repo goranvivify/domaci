@@ -1,0 +1,9 @@
+{
+    "siteLogoButton": ".vs-l-project__header > .vs-c-site-logo",
+    "searchButton": "button[class='vs-c-btn vs-c-btn--link el-tooltip']",
+    "showNotification": "button[class='vs-c-btn vs-c-btn--link']",
+    "howItWorksButton": ".vs-l-project__options > .el-tooltip.vs-c-btn.vs-c-btn--link",
+    "myAccountBtn": ".el-dropdown-link > .vs-c-user-name",
+    "organizationActive": ".vs-c-img--avatar.vs-u-cursor--pointer > span",
+    "boardActive": "h1[class='vs-l-project__title vs-u-cursor--default vs-u-padding']"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "qa_1_10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "./node_modules/.bin/cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goranvivify/domaci.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goranvivify/domaci/issues"
+  },
+  "homepage": "https://github.com/goranvivify/domaci#readme",
+  "dependencies": {
+    "cypress": "^8.5.0"
+  }
+}

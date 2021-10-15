@@ -1,0 +1,16 @@
+{
+    "newTaskTitleInput": "textarea[type='textarea']",
+    "saveTaskTitleButton": "button[name='new_item_save'] > span",
+    "saveEditedTaskTitleButton": "button[name='update_item_title']",
+    "cancelTaskTitleButton": "button[name='new_item_save'] > span",
+    "typeOfTask": {
+        "story": "a:nth-of-type(1) > .vs-c-task-modal-type-dropdown__item-name",
+        "improvement": "a:nth-of-type(2) > .vs-c-task-modal-type-dropdown__item-name",
+        "bug": "div.vs-c-task-dropdown__body > a:nth-child(3)",
+        "task": "div.vs-c-task-dropdown__body > a:nth-child(4)",
+        "note": "a:nth-child(5) > span.vs-c-task-modal-type-dropdown__item-name",
+        "idea": "a:nth-child(6) > span.vs-c-task-modal-type-dropdown__item-name"
+    },
+    "confirmTaskDelete": "div > button[type='button'].el-button.el-button--success",
+    "cancelTaskDelete": "div > button[type='button'].el-button.el-button--warning"
+}

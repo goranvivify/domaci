@@ -1,0 +1,7 @@
+{
+    "_comment": "Much more to come here",
+    "delete": ".vs-c-btn.vs-c-btn--spaced.vs-c-btn--warning",
+    "confirmDeleteInput": ".el-dialog__body .el-form .el-input__inner",
+    "cancelDelete": "button[name='cancel-btn']",
+    "confirmDelete": "button[name='save-btn']"
+}

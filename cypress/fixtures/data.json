@@ -1,0 +1,35 @@
+{
+    "user": {
+        "email": "goran.pobric@vivifyideas.com",
+        "password": "pobra11"
+    },
+    "newUser" : {
+        "newEmailValid": "goran.pobric@gmail.com",
+        "newPasswordValid": "Test1234!",
+        "numberOfUsersValid": "1"
+    },
+    "negativData": {
+        "email": {
+            "onlySpaces": "        ",
+            "noBodyEmail": "@vivifyideas.com",
+            "noMonkeySignEmail": "goran.pobricvivifyideas.com",
+            "noExtEmailDot": "goran.pobric@vivifyideas.",
+            "noExtEmail": "goran.pobric@vivifyideas",
+            "nonValidEmail": "goranpobric@vivifyideas.com"
+        },
+        "password": {
+            "onlySpacesPassword": "         ",
+            "nonValidPassword": "test1234",
+            "upperCaseLetterSwitchPassword": "Pobra11",
+            "oneLetterPassword": "g",
+            "password101Characters": "l2yF2ng90394uzQ9eP1oIDCSvpVDkKg6GWdGbMaiDVICSyR19gtmMqL5BNif8sg1jMEpThUPfvG6qiC8PNmWr0UOpsGnayKQby9L4",
+            "FourCharactersPassword": "1234"
+        },
+        "numberOfUsers": {
+            "letters": "test",
+            "zero": "0",
+            "moreThanTen": "11",
+            "negativeNumber": "-5"
+        }
+    }
+}

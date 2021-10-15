@@ -1,0 +1,9 @@
+{
+    "details": {
+        "delete": "div:nth-child(8) > div > div.vs-c-settings-section-form.vs-c-settings-section-form--limited.vs-c-settings-section-attention-wrapper > button",
+        "cancelDelete": "div > button[type='button'].el-button.el-button--warning",
+        "confirmDelete": "div.vs-c-modal__footer > div > button[type='button'].el-button.el-button--success"
+    },
+    "infoPanelAppearsFromNowhereOkButton": ".vs-c-modal--features-button > .vs-c-btn",
+    "comment": "Much more to come here!!!"
+}

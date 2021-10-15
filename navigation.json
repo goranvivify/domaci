@@ -1,6 +1,0 @@
-{
-    "siteLogoButton": "div[class='vs-c-site-logo vs-u-cursor--pointer']",
-    "searchButton": "button[class='vs-c-btn vs-c-btn--link el-tooltip']",
-    "showNotification": "button[class='vs-c-btn vs-c-btn--link']",
-    "howItWorksButton": ".vs-l-project__options > .el-tooltip.vs-c-btn.vs-c-btn--link"
-}

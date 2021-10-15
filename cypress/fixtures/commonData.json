@@ -1,0 +1,11 @@
+{
+    "negativeData": {
+        "onlySpaces": "    ",
+        "scriptCodeInjection": "<script onmouseover=alert('Wufff!')>click me!</script>",
+        "tooLongString257": "orzBAU1VlKYqC4raTtlGtz25ZrLWOdgiybBAop12NzRiX25KoKALsbjwB6EKLmebo2Hv0k8kZIGVl5sKN78kIbEwGrmxKYwo59T7SERWNSWL8Q2BqlXcoGhHxxPDV1JwCvkhYCQbwbiSwS2XC5BpQvAAFYoTpxLFZyKUD6mFLpv7qdPreAiOpR3MXXc4HI1vvXd9LXleshDzaSKJ7qm1s6j1I7MlR02JbY7HWpzxrzUfDlJeuoGpJQtSfghQfWcvU"
+    },
+    "validData": {
+        "testName": "TEST NAME",
+        "editedName": "EDITED TEST NAME"
+    }
+}
