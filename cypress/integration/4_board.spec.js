@@ -10,9 +10,6 @@ import boardSettingsMenu from "../fixtures/boardSettingsMenu.json";
 import organizationSettingsMenu from "../fixtures/organizationSettingsMenu.json";
 import navigation from "../fixtures/navigation.json";
 import dataFromRegister from "../fixtures/dataFromRegister.json";
-import dataFromCreateBoard from "../fixtures/dataFromCreateBoard.json";
-import createBoardId from "../fixtures/createBoardId.json";
-import createBoardOrgID from "../fixtures/createBoardOrgId.json";
 
 describe("New board", () => {
   before("Login to app", () => {
@@ -40,11 +37,6 @@ describe("New board", () => {
       cy.get(activeOrganizationMainBoard.okButton).click();
     }
     cy.wait("@createOrganization").then((res) => {
-      // var newOrgId = res.response.body.id;
-      // cy.writeFile("cypress/fixtures/createBoardOrgId.json", {
-      //   newOrganizationId: newOrgId,
-      // });
-      console.log(res);
       expect(res.response.statusCode).to.eq(200);
       expect(res.response.body.users[0].company_name).to.eq(
         data.newUser.companyName
@@ -105,16 +97,11 @@ describe("New board", () => {
       cy.get(activeBoardMainPanel.newBoardCreatePanel.nextButton).click();
       cy.wait("@newBoard").then((res) => {
         expect(res.response.statusCode).to.eq(201);
-        // expect(res.response.body.organization_id).to.eq(
-        //   createBoardOrgId.newOrganizationId
-        // );
         expect(res.response.body.owner_id).to.eq(dataFromRegister.ownerId);
-        // var newBoardId = res.response.body.id;
-        // // cy.writeFile("cypress/fixtures/createBoardId.json", {
-        // //   newBoardId: newBoardId,
-        // // });
-        console.log(res);
-        console.log("NEW BOARD");
+        cy.writeFile(
+          "cypress/fixtures/responseFromBoardSpec.json",
+          res.response.body
+        );
       });
     });
   });

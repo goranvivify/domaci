@@ -76,10 +76,10 @@ describe("Test of Organizations", () => {
         expect(res.response.body.users[0].full_name).to.eq(
           data.newUser.full_name
         );
-        var newOrganizationId = res.response.body.id;
-        cy.writeFile("cypress/fixtures/dataFromCreate.json", {
-          newOrganizationId: newOrganizationId,
-        });
+        cy.writeFile(
+          "cypress/fixtures/responseFromOrgSpec.json",
+          res.response.body
+        );
       });
     });
   });

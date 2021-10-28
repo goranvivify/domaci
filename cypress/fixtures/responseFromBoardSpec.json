@@ -1,0 +1,258 @@
+{
+  "id": 2570,
+  "organization_id": 4237,
+  "name": "TEST NAME",
+  "slug": "test-name",
+  "description": null,
+  "owner_id": 1233,
+  "created_at": "2021-10-28 16:05:58",
+  "code": "TNAA",
+  "type": "scrum_board",
+  "task_unit": "points",
+  "default_assignee_id": 0,
+  "default_follower_id": 0,
+  "sprints": [],
+  "integrations": [],
+  "status": "active",
+  "pivot": null,
+  "api_key": null,
+  "avatar": null,
+  "avatar_original": null,
+  "avatar_crop_cords": null,
+  "workdays": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "item_details_configuration": null,
+  "default_task_type_id": 1,
+  "show_item_progress_bar": false,
+  "is_only_task_effort_visible": false,
+  "show_task_code": false,
+  "files_size": null,
+  "default_task_tab": null,
+  "task_tabs": [
+    {
+      "name": "All",
+      "enabled": true
+    },
+    {
+      "name": "Commits",
+      "enabled": true
+    },
+    {
+      "name": "Comments",
+      "enabled": true
+    },
+    {
+      "name": "Activities",
+      "enabled": true
+    }
+  ],
+  "boardusers": [
+    {
+      "id": 2570,
+      "access": "owner",
+      "board_id": 2570,
+      "user_id": 1233,
+      "created_at": "2021-10-28 16:05:58",
+      "order_position": 1,
+      "full_card_view": false,
+      "saved_filters": null,
+      "starred": false,
+      "user": {
+        "id": 1233,
+        "email": "goran.pobric+l0jva@gmail.com",
+        "active": 1,
+        "first_name": "Goran",
+        "last_name": "QA",
+        "full_name": "Goran QA",
+        "created_at": "2021-10-27 16:54:36",
+        "avatar": "https://cypress-api.vivifyscrum-stage.com/img/avatar.png",
+        "original_avatar": "https://cypress-api.vivifyscrum-stage.com/img/avatar.png",
+        "avatar_crop_cords": null,
+        "is_admin": false,
+        "service": null,
+        "boards_left": null,
+        "owner_label": "",
+        "current_plan_granted_by_admin": false,
+        "locked_boards": [],
+        "invoice_bill_to": "goran.pobric+l0jva@gmail.com",
+        "theme": "white",
+        "is_premium": 0,
+        "current_plan_id": 1,
+        "show_organizations_features_info": 0,
+        "send_24h_comeback_event": false,
+        "send_5d_comeback_event": false,
+        "is_trial": true,
+        "not_agreed": false,
+        "regular_first_name": "Goran",
+        "regular_last_name": "QA",
+        "regular_email": "goran.pobric+l0jva@gmail.com",
+        "should_see_agreement": false,
+        "invoice_date_format": "",
+        "payment_processor": null,
+        "finished_registration": true,
+        "paddle_update_url": "",
+        "paddle_cancel_url": "",
+        "organization_count": 1,
+        "has_responded_to_paddle_campaign": 0,
+        "premium_plan_members": 1,
+        "premium_plan_interval": "yearly",
+        "had_trial": 0,
+        "coupon_id": null,
+        "appsumo_coupons_count": 0,
+        "first_organization": 4237,
+        "is_appsumo": 0,
+        "show_finish_registration": false,
+        "lifetime_plan_id": null,
+        "lifetime_payment_status": null,
+        "free_trial_start_date": "2021-10-27 16:54:37",
+        "free_trial_version": 1,
+        "pricing_plan_id": 1,
+        "days_passed_from_trial_activation": 0,
+        "has_at_least_one_organization": true,
+        "current_plan": {
+          "id": 1,
+          "name": "Basic",
+          "description": [
+            "Unlimited number of Boards you can join",
+            "Ownership of 1 Board",
+            "Unlimited number of Sprints/Lists you can create",
+            "Access to 10 newest Sprints/Lists per Board",
+            "100 Items per Board",
+            "Three Team Members per Board"
+          ],
+          "boards_limit": 1,
+          "sprints_per_board_limit": null,
+          "tasks_per_board_limit": 100,
+          "members_per_board_limit": 3,
+          "price": 0,
+          "currency": null,
+          "enabled": true,
+          "done_at": null,
+          "created_at": "2021-07-09 13:41:03"
+        },
+        "pricing_plan": {
+          "id": 1,
+          "plan_id": "starter",
+          "name": "Starter",
+          "monthly_price": 10,
+          "annual_price": 96,
+          "currency": "USD",
+          "price_type": "fixed",
+          "users_min": 1,
+          "users_max": 10,
+          "monthly_paddle_id": 14412,
+          "annual_paddle_id": 14413
+        }
+      }
+    }
+  ],
+  "show_due_date_table_view": false,
+  "labels": [
+    {
+      "id": 28219,
+      "name": null,
+      "color": "#eb2a7d",
+      "description": null,
+      "board_id": 2570,
+      "created_at": "2021-10-28 16:05:58",
+      "updated_at": "2021-10-28 16:05:58"
+    },
+    {
+      "id": 28220,
+      "name": null,
+      "color": "#f080a8",
+      "description": null,
+      "board_id": 2570,
+      "created_at": "2021-10-28 16:05:58",
+      "updated_at": "2021-10-28 16:05:58"
+    },
+    {
+      "id": 28221,
+      "name": null,
+      "color": "#21c2ee",
+      "description": null,
+      "board_id": 2570,
+      "created_at": "2021-10-28 16:05:58",
+      "updated_at": "2021-10-28 16:05:58"
+    },
+    {
+      "id": 28222,
+      "name": null,
+      "color": "#b1dfe8",
+      "description": null,
+      "board_id": 2570,
+      "created_at": "2021-10-28 16:05:58",
+      "updated_at": "2021-10-28 16:05:58"
+    },
+    {
+      "id": 28223,
+      "name": null,
+      "color": "#74c9bf",
+      "description": null,
+      "board_id": 2570,
+      "created_at": "2021-10-28 16:05:58",
+      "updated_at": "2021-10-28 16:05:58"
+    },
+    {
+      "id": 28224,
+      "name": null,
+      "color": "#89b64e",
+      "description": null,
+      "board_id": 2570,
+      "created_at": "2021-10-28 16:05:58",
+      "updated_at": "2021-10-28 16:05:58"
+    },
+    {
+      "id": 28225,
+      "name": null,
+      "color": "#c7dc7a",
+      "description": null,
+      "board_id": 2570,
+      "created_at": "2021-10-28 16:05:58",
+      "updated_at": "2021-10-28 16:05:58"
+    },
+    {
+      "id": 28226,
+      "name": null,
+      "color": "#fedd39",
+      "description": null,
+      "board_id": 2570,
+      "created_at": "2021-10-28 16:05:58",
+      "updated_at": "2021-10-28 16:05:58"
+    },
+    {
+      "id": 28227,
+      "name": null,
+      "color": "#f8a430",
+      "description": null,
+      "board_id": 2570,
+      "created_at": "2021-10-28 16:05:58",
+      "updated_at": "2021-10-28 16:05:58"
+    },
+    {
+      "id": 28228,
+      "name": null,
+      "color": "#ed654b",
+      "description": null,
+      "board_id": 2570,
+      "created_at": "2021-10-28 16:05:58",
+      "updated_at": "2021-10-28 16:05:58"
+    },
+    {
+      "id": 28229,
+      "name": null,
+      "color": "#d4d5d4",
+      "description": null,
+      "board_id": 2570,
+      "created_at": "2021-10-28 16:05:58",
+      "updated_at": "2021-10-28 16:05:58"
+    }
+  ],
+  "hotkeys": [],
+  "gitIntegration": null
+}

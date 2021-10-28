@@ -146,10 +146,7 @@ describe("Login tests", () => {
         .type(data.newUser.newPasswordValid);
       cy.get(loginPage.loginButton).click();
       cy.intercept("/api/v2/organizations-data").as("afterLogin");
-      cy.wait("@afterLogin").then((res) => {
-        console.log("AFTER LOGIN RESPONSE");
-        console.log(res);
-      });
+      cy.wait("@afterLogin").then((res) => {});
       cy.get(loginPage.finishRegisterAfterLoginModal.firstNameInput)
         .should("be.visible")
         .clear()
