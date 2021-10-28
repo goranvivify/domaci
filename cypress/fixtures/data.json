@@ -6,7 +6,12 @@
     "newUser" : {
         "newEmailValid": "goran.pobric@gmail.com",
         "newPasswordValid": "Test1234!",
-        "numberOfUsersValid": "1"
+        "numberOfUsersValid": "1",
+        "firstName": "Goran",
+        "lastName": "QA",
+        "companyName": "TEST Comapany",
+        "organizationName": "TEST Organization",
+        "full_name": "Goran QA"
     },
     "negativData": {
         "email": {
@@ -15,7 +20,7 @@
             "noMonkeySignEmail": "goran.pobricvivifyideas.com",
             "noExtEmailDot": "goran.pobric@vivifyideas.",
             "noExtEmail": "goran.pobric@vivifyideas",
-            "nonValidEmail": "goranpobric@vivifyideas.com"
+            "nonValidEmail": "pobric.goran@vivifyideas.com"
         },
         "password": {
             "onlySpacesPassword": "         ",

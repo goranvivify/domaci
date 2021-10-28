@@ -7,6 +7,7 @@
     },
     "loginPage": {
         "email": "div:nth-child(1) > div.vs-c-form-item__error-wrapper > span",
-        "password": "div:nth-child(2) > div.vs-c-form-item__error-wrapper > span"
+        "password": "div:nth-child(2) > div.vs-c-form-item__error-wrapper > span",
+        "loginButton": ".vs-c-custom-errors > .el-form-item__error"
     }
 }

@@ -4,29 +4,36 @@ import data from "../fixtures/data.json";
 import activeOrganizationMainBoard from "../fixtures/activeOrganizationsMainBoard.json";
 import commonData from "../fixtures/commonData.json";
 import navigation from "../fixtures/navigation.json";
+import dataFromRegister from "../fixtures/dataFromRegister.json";
 describe("Test of Organizations", () => {
-  context("Add new organization test", () => {
-    it("Login to app", () => {
-      cy.visit("/");
-      cy.get(loginPage.emailInput).clear().type(data.user.email);
-      cy.get(loginPage.passwordInput).clear().type(data.user.password);
-      cy.get(loginPage.loginButton).click();
-      cy.wait(3000);
+  before("Login to app", () => {
+    cy.intercept("/api/v2/common").as("login");
+    cy.visit("/");
+    cy.get(loginPage.emailInput).clear().type(dataFromRegister.newUserEmail);
+    cy.get(loginPage.passwordInput).clear().type(data.newUser.newPasswordValid);
+    cy.get(loginPage.loginButton).click();
+    cy.wait("@login").then((res) => {
+      expect(res.response.statusCode).to.eq(200);
     });
+  });
+  context("Add new organization test", () => {
     it("no name new organization", () => {
       cy.get(activeOrganizationMainBoard.addNewOrganization).click();
+      cy.get(activeOrganizationMainBoard.buttonNext).should("be.disabled");
       cy.get(activeOrganizationMainBoard.buttonNext).click({ force: true });
     });
     it("only spaces in new organization name input", () => {
       cy.get(activeOrganizationMainBoard.newOrganizationNameInput)
         .clear()
         .type(commonData.negativeData.onlySpaces);
+      cy.get(activeOrganizationMainBoard.buttonNext).should("be.disabled");
       cy.get(activeOrganizationMainBoard.buttonNext).click({ force: true });
     });
     it("257 character in new organization name input", () => {
       cy.get(activeOrganizationMainBoard.newOrganizationNameInput)
         .clear()
         .type(commonData.negativeData.tooLongString257);
+      cy.get(activeOrganizationMainBoard.buttonNext).should("be.disabled");
       cy.get(activeOrganizationMainBoard.buttonNext).click();
       if (activeOrganizationMainBoard.buttonPrevious != "disabled") {
         cy.get(activeOrganizationMainBoard.buttonPrevious).click({
@@ -38,9 +45,11 @@ describe("Test of Organizations", () => {
       cy.get(activeOrganizationMainBoard.newOrganizationNameInput)
         .clear()
         .type(commonData.negativeData.scriptCodeInjection);
+      cy.get(activeOrganizationMainBoard.buttonNext).should("be.disabled");
       cy.get(activeOrganizationMainBoard.buttonNext).click({ force: true });
     });
     it("valid new organization create", () => {
+      cy.intercept("/api/v2/organizations").as("createOrganization");
       if (activeOrganizationMainBoard.buttonPrevious != "disabled") {
         cy.get(activeOrganizationMainBoard.buttonPrevious).click();
         cy.get(activeOrganizationMainBoard.addNewOrganization).click({
@@ -55,6 +64,23 @@ describe("Test of Organizations", () => {
       if (activeOrganizationMainBoard.okButton != "disabled") {
         cy.get(activeOrganizationMainBoard.okButton).click();
       }
+      cy.wait("@createOrganization").then((res) => {
+        expect(res.response.statusCode).to.eq(200);
+        expect(res.response.body.owner_id).to.eq(dataFromRegister.ownerId);
+        expect(res.response.body.users[0].company_name).to.eq(
+          data.newUser.companyName
+        );
+        expect(res.response.body.users[0].email).to.eq(
+          dataFromRegister.newUserEmail
+        );
+        expect(res.response.body.users[0].full_name).to.eq(
+          data.newUser.full_name
+        );
+        var newOrganizationId = res.response.body.id;
+        cy.writeFile("cypress/fixtures/dataFromCreate.json", {
+          newOrganizationId: newOrganizationId,
+        });
+      });
     });
   });
   context("Edit created organization", () => {
@@ -81,7 +107,7 @@ describe("Test of Organizations", () => {
         force: true,
       });
       cy.get(activeOrganizationMainBoard.passwordConfirmForDeleteInput).type(
-        data.user.password
+        data.newUser.newPasswordValid
       );
       cy.get(
         activeOrganizationMainBoard.passwordConfirmForDeleteButton

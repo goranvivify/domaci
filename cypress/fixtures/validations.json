@@ -8,11 +8,13 @@
             "passwordRequired": "The password field is required"
         },
         "numberOfUsers": {
+            "required": "The number of users field is required",
             "mustBeInteger": "The number of users field must be an integer",
             "from1to10": "The number of users must be between 1 and 10"
         },
         "terms": {
             "agreeToTerms": "The agree to terms and privacy policy field is required"
-        }
+        },
+        "loginButton": "Oops! Your email/password combination is incorrect"
     }
 }

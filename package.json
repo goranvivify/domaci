@@ -16,7 +16,7 @@
     "url": "https://github.com/goranvivify/domaci/issues"
   },
   "homepage": "https://github.com/goranvivify/domaci#readme",
-  "dependencies": {
-    "cypress": "^8.5.0"
+  "devDependencies": {
+    "cypress": "^8.7.0"
   }
 }
