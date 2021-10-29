@@ -8,5 +8,15 @@
     "facebookLoginButton": "button[class='vs-c-btn vs-c-btn--social-auth vs-c-btn--fb']",
     "twitterLoginButton": "button[class='vs-c-btn vs-c-btn--social-auth vs-c-btn--tw']",
     "regzenLoginButton": "button[class='vs-c-btn vs-c-btn--social-auth vs-c-btn--regzen']",
-    "signUpButton": "a[href='https://cypress-api.vivifyscrum-stage.com/pricing']"
+    "signUpButton": "a[href='https://cypress-api.vivifyscrum-stage.com/pricing']",
+    "finishRegisterAfterLoginModal":
+    {
+        "finishRegisterAfterLogin": ".vs-c-auth-modal__body",
+        "firstNameInput": "input[data-vv-as='first name']",
+        "lastNameInput": "input[data-vv-as='last name']",
+        "companyNameInput": "input[data-vv-as='company name']",
+        "organizationNameInput":"input[data-vv-as='organization name']",
+        "finishRegistrationButton": "div > button[type='submit']",
+        "cancelFinishingRegistrationButton": ".vs-c-btn--danger"
+    }
 }

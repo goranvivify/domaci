@@ -9,16 +9,22 @@ import tasks from "../fixtures/tasks.json";
 import boardSettingsMenu from "../fixtures/boardSettingsMenu.json";
 import organizationSettingsMenu from "../fixtures/organizationSettingsMenu.json";
 import navigation from "../fixtures/navigation.json";
+import dataFromRegister from "../fixtures/dataFromRegister.json";
 
-context("New board", () => {
-  it("log in and visit My Organization", () => {
+describe("New board", () => {
+  before("Login to app", () => {
+    cy.intercept("/api/v2/common").as("login");
     cy.visit("/");
-    cy.get(loginPage.emailInput).clear().type(data.user.email);
-    cy.get(loginPage.passwordInput).clear().type(data.user.password);
+    cy.get(loginPage.emailInput).clear().type(dataFromRegister.newUserEmail);
+    cy.get(loginPage.passwordInput).clear().type(data.newUser.newPasswordValid);
     cy.get(loginPage.loginButton).click();
-    cy.wait(3000);
+    cy.wait("@login").then((res) => {
+      expect(res.response.statusCode).to.eq(200);
+    });
   });
-  it("create organization", () => {
+
+  it("valid new organization create", () => {
+    cy.intercept("/api/v2/organizations").as("createOrganization");
     cy.get(activeOrganizationMainBoard.addNewOrganization).click({
       force: true,
     });
@@ -27,10 +33,23 @@ context("New board", () => {
       .type(commonData.validData.testName);
     cy.get(activeOrganizationMainBoard.buttonNext).click();
     cy.get(activeOrganizationMainBoard.buttonNext).click();
-    if (activeOrganizationMainBoard.okButton != "disabled") {
+    if (activeOrganizationMainBoard.okButton) {
       cy.get(activeOrganizationMainBoard.okButton).click();
     }
+    cy.wait("@createOrganization").then((res) => {
+      expect(res.response.statusCode).to.eq(200);
+      expect(res.response.body.users[0].company_name).to.eq(
+        data.newUser.companyName
+      );
+      expect(res.response.body.users[0].email).to.eq(
+        dataFromRegister.newUserEmail
+      );
+      expect(res.response.body.users[0].full_name).to.eq(
+        data.newUser.full_name
+      );
+    });
   });
+
   context("Test New Board Creation - name", () => {
     it("only spaces in name", () => {
       cy.get(activeOrganizationMainBoard.addNewBoardButton).click();
@@ -67,6 +86,7 @@ context("New board", () => {
       cy.get(activeBoardMainPanel.newBoardCreatePanel.backButton).click();
     });
     it("valid name + scrum", () => {
+      cy.intercept("/api/v2/boards").as("newBoard");
       cy.get(activeBoardMainPanel.newBoardCreatePanel.boardTitleNameInput)
         .clear()
         .type(commonData.validData.testName);
@@ -75,6 +95,14 @@ context("New board", () => {
       cy.get(activeBoardMainPanel.newBoardCreatePanel.nextButton).click();
       cy.get(activeBoardMainPanel.newBoardCreatePanel.nextButton).click();
       cy.get(activeBoardMainPanel.newBoardCreatePanel.nextButton).click();
+      cy.wait("@newBoard").then((res) => {
+        expect(res.response.statusCode).to.eq(201);
+        expect(res.response.body.owner_id).to.eq(dataFromRegister.ownerId);
+        cy.writeFile(
+          "cypress/fixtures/responseFromBoardSpec.json",
+          res.response.body
+        );
+      });
     });
   });
   context("Test created board", () => {
@@ -131,7 +159,7 @@ context("New board", () => {
     });
     it("archive created organization", () => {
       cy.get(navigation.siteLogoButton).click();
-      if (activeOrganizationMainBoard.okButton != "disabled") {
+      if (activeOrganizationMainBoard.okButton) {
         cy.get(activeOrganizationMainBoard.okButton).click();
       }
       cy.get(activeOrganizationMainBoard.sideNav.configuration).click({
@@ -141,7 +169,7 @@ context("New board", () => {
       cy.get(organizationSettingsMenu.delete).click();
       cy.get(organizationSettingsMenu.confirmDeleteInput)
         .clear()
-        .type(data.user.password);
+        .type(data.newUser.newPasswordValid);
       cy.get(organizationSettingsMenu.confirmDelete).click();
     });
   });
