@@ -13,7 +13,7 @@
         "organizationName": "TEST Organization",
         "full_name": "Goran QA"
     },
-    "negativData": {
+    "negativeData": {
         "email": {
             "onlySpaces": "        ",
             "noBodyEmail": "@vivifyideas.com",

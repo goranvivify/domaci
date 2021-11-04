@@ -2,7 +2,7 @@
     "negativeData": {
         "onlySpaces": "    ",
         "scriptCodeInjection": "<script onmouseover=alert('Wufff!')>click me!</script>",
-        "tooLongString257": "orzBAU1VlKYqC4raTtlGtz25ZrLWOdgiybBAop12NzRiX25KoKALsbjwB6EKLmebo2Hv0k8kZIGVl5sKN78kIbEwGrmxKYwo59T7SERWNSWL8Q2BqlXcoGhHxxPDV1JwCvkhYCQbwbiSwS2XC5BpQvAAFYoTpxLFZyKUD6mFLpv7qdPreAiOpR3MXXc4HI1vvXd9LXleshDzaSKJ7qm1s6j1I7MlR02JbY7HWpzxrzUfDlJeuoGpJQtSfghQfWcvU"
+        "tooLongString256": "77AducRpefn5v2Y60ScpN0lA6J24WmiTOVyGzXJVH4GBqrxLG6GBk3EBs7Q6DFvTfjctu72bmDdoQ3PRdzJEea04mTedv1leLtdzDNOqziVfU91mH6eQJfxxGHLiuctDCqAKnmhsfGAljHtRWpT0GrHWqDFCIXAR5XtbO1jvZJCDZ7OM6gGA1zcRnIDzQSThKuTMcDhV8ouh7576a3qpze3IIZenL2bUfHo4ryuw3B3IsWeL2FWr4zY0qbeOSIZM"
     },
     "validData": {
         "testName": "TEST NAME",
