@@ -7,13 +7,16 @@ import data from "../fixtures/data.json";
 import dataFromRegister from "../fixtures/dataFromRegister.json";
 
 describe("New board", () => {
-  beforeEach("Login to app", () => {
+  before("Login to app", () => {
     cy.intercept("/api/v2/common").as("login");
     cy.visit("/");
-    authLogin.login({});
+    cy.login();
     cy.wait("@login").then((res) => {
       expect(res.response.statusCode).to.eq(200);
     });
+  });
+  after("logout", () => {
+    cy.logout();
   });
 
   it("valid new organization create", () => {
@@ -30,6 +33,32 @@ describe("New board", () => {
   context("Test New Board Creation - name", () => {
     it("only spaces in name", () => {
       // cy.get(".vs-c-my-organization__body > p:nth-of-type(2)").click();
+      // cy.get("#Your App: 'domaci'")
+      //   .iframe()
+      //   .find(
+      //     'button[class="vs-c-btn vs-c-btn--primary vs-c-btn--lg vs-u-font-sm vs-c-modal--features-confirm-button"]'
+      //   )
+      //   .should("contain", "OK")
+      //   .click();
+      // cy.get("iframe").iframe2(() => {
+      //   cy.get("button").click();
+      // });
+      // const getIframeDocument = () => {
+      //   return cy.get("iframe").eq(2).its("0.contentDocument");
+      // };
+
+      // const getIframeBody = () => {
+      //   return getIframeDocument()
+      //     .its("body")
+      //     .should("not.be.undefined")
+      //     .then(cy.wrap);
+      // };
+      // getIframeBody().find("button").contains("OK").click({ force: true });
+      cy.get(
+        ".vs-c-btn.vs-c-btn--lg.vs-c-btn--primary.vs-c-modal--features-confirm-button.vs-u-font-sm",
+        { timeout: 3000 }
+      ).click({ force: true });
+      cy.wait(1000);
       authBoard.createBoard({ name: commonData.negativeData.onlySpaces });
     });
     it("script code in name", () => {

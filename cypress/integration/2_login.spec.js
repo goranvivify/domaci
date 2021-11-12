@@ -97,9 +97,9 @@ describe("Login tests", () => {
 
     context("Valid login + logout", () => {
       it("Valid login", () => {
-        loginModule.login({});
+        cy.login();
         loginModule.cancelRegFinish();
-        // loginModule.finishRegistration({});
+        // loginModule.finishRegistration();
       });
     });
   });

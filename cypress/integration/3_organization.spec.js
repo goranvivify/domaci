@@ -7,9 +7,30 @@ import data from "../fixtures/data.json";
 describe("Test of Organizations", () => {
   beforeEach("Login to app", () => {
     cy.visit("/");
-    authLogin.login({});
+    cy.login();
+  });
+  after("logout", () => {
+    cy.logout();
   });
   context("Add new organization test", () => {
+    it("archive organization", () => {
+      authCreateOrg.archiveOrganization();
+    });
+    it("delete organization", () => {
+      cy.get("body").then(($body) => {
+        if (
+          $body.find(
+            ".vs-c-btn.vs-c-btn--lg.vs-c-btn--primary.vs-c-modal--features-confirm-button.vs-u-font-sm"
+          ).length > 0
+        ) {
+          //evaluates as true
+          cy.get(
+            ".vs-c-btn.vs-c-btn--lg.vs-c-btn--primary.vs-c-modal--features-confirm-button.vs-u-font-sm"
+          ).click();
+        }
+      });
+      authCreateOrg.deleteOrganization({});
+    });
     it("no name new organization", () => {
       authCreateOrg.createOrganization({
         name: "",

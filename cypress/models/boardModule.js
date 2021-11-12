@@ -14,7 +14,9 @@ module.exports = {
     return cy.get("button[name='next_btn']");
   },
   get okButton() {
-    return cy.get(".vs-c-modal--features-button > .vs-c-btn");
+    return cy.get(
+      "button[class='vs-c-btn vs-c-btn--primary vs-c-btn--lg vs-u-font-sm vs-c-modal--features-confirm-button']"
+    );
   },
 
   get addNewBoardButton() {
@@ -120,9 +122,13 @@ module.exports = {
   },
   createBoard({ name = commonData.validData.testName }) {
     this.addNewBoardButton.should("be.visible").click({ force: true });
+    cy.wait(1000);
     // this.organizationDropDownMenu.click();
     // this.organizationDropDownMenuChoiceOne.click();
     this.boardTitleNameInput.should("be.visible").type(name);
     this.nextButton.should("be.visible").click();
+  },
+  clickOkButton() {
+    this.okButton.click({ force: true });
   },
 };

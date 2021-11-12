@@ -22,7 +22,7 @@ describe("Register new user", () => {
     authRegister.goToRegister();
   });
   after("Logout", () => {
-    authRegister.logout();
+    cy.logout();
   });
   // it("visit register page", () => {
   //   cy.intercept("/api/v2/pricing-plans/**").as("register");

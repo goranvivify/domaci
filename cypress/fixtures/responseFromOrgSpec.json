@@ -1,7 +1,7 @@
 {
-  "id": 5836,
+  "id": 6217,
   "name": "TEST NAME",
-  "owner_id": 1427,
+  "owner_id": 1520,
   "avatar": null,
   "avatar_crop_cords": null,
   "status": "active",
@@ -12,8 +12,8 @@
     3,
     4
   ],
-  "created_at": "2021-11-04 19:39:54",
-  "updated_at": "2021-11-04 19:39:54",
+  "created_at": "2021-11-11 18:09:58",
+  "updated_at": "2021-11-11 18:09:58",
   "is_owner_trial_expired": 0,
   "subdomain_id": null,
   "calendar_starting_day": 7,
@@ -21,20 +21,20 @@
   "avatar_public_path": null,
   "users": [
     {
-      "id": 1427,
+      "id": 1520,
       "first_name": "",
       "last_name": "",
-      "email": "goran.pobric+fogsi@gmail.com",
-      "created_at": "2021-11-03 22:20:19",
-      "updated_at": "2021-11-04 19:39:51",
+      "email": "goran.pobric+4ivi7@gmail.com",
+      "created_at": "2021-11-11 18:04:20",
+      "updated_at": "2021-11-11 18:09:55",
       "avatar": "https://cypress-api.vivifyscrum-stage.com/img/avatar.png",
       "is_admin": false,
-      "last_activity": "2021-11-04 19:39:51",
+      "last_activity": "2021-11-11 18:09:55",
       "active": 1,
       "current_plan_id": 1,
       "service": null,
       "service_id": null,
-      "invoice_bill_to": "goran.pobric+fogsi@gmail.com",
+      "invoice_bill_to": "goran.pobric+4ivi7@gmail.com",
       "avatar_crop_cords": null,
       "demo_id": null,
       "demo_start_date": null,
@@ -44,7 +44,7 @@
       "show_organizations_features_info": 0,
       "token_uuid": null,
       "not_agreed": false,
-      "first_time_logged_in": "2021-11-03 00:00:00",
+      "first_time_logged_in": "2021-11-11 00:00:00",
       "signed_up_5d_event_sent": 0,
       "feedback_form_token": null,
       "has_submited_feedback_form": 0,
@@ -64,7 +64,7 @@
       "is_appsumo": 0,
       "lifetime_plan_id": null,
       "lifetime_payment_status": null,
-      "free_trial_start_date": "2021-11-03 22:20:19",
+      "free_trial_start_date": "2021-11-11 18:04:20",
       "show_finish_registration": false,
       "free_trial_version": 1,
       "company_name": null,
@@ -75,43 +75,43 @@
       "is_demo": false,
       "is_trial": true,
       "pivot": {
-        "organization_id": 5836,
-        "user_id": 1427,
+        "organization_id": 6217,
+        "user_id": 1520,
         "order_position": null,
-        "joined_at": "2021-11-04 19:39:54",
-        "id": 5847
+        "joined_at": "2021-11-11 18:09:58",
+        "id": 6228
       }
     }
   ],
   "subdomain": null,
   "acl_roles": [
     {
-      "id": 5836,
+      "id": 6217,
       "name": "Member",
-      "organization_id": 5836,
-      "created_at": "2021-11-04 19:39:54",
-      "updated_at": "2021-11-04 19:39:54",
+      "organization_id": 6217,
+      "created_at": "2021-11-11 18:09:58",
+      "updated_at": "2021-11-11 18:09:58",
       "user_permissions": [],
       "permissions": [
         {
-          "id": 5836,
-          "organization_role_id": 5836,
+          "id": 6217,
+          "organization_role_id": 6217,
           "page": "projects",
           "action": "view_all",
-          "created_at": "2021-11-04 19:39:54",
-          "updated_at": "2021-11-04 19:39:54",
+          "created_at": "2021-11-11 18:09:58",
+          "updated_at": "2021-11-11 18:09:58",
           "name": "Member",
-          "organization_id": 5836
+          "organization_id": 6217
         },
         {
-          "id": 5836,
-          "organization_role_id": 5836,
+          "id": 6217,
+          "organization_role_id": 6217,
           "page": "members",
           "action": "view_all",
-          "created_at": "2021-11-04 19:39:54",
-          "updated_at": "2021-11-04 19:39:54",
+          "created_at": "2021-11-11 18:09:58",
+          "updated_at": "2021-11-11 18:09:58",
           "name": "Member",
-          "organization_id": 5836
+          "organization_id": 6217
         }
       ]
     }

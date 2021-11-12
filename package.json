@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/goranvivify/domaci#readme",
   "devDependencies": {
-    "cypress": "^8.7.0"
+    "cypress": "^9.0.0"
   },
   "dependencies": {
     "faker": "^5.5.3"
