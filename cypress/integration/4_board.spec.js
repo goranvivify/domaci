@@ -1,89 +1,73 @@
 /// <reference types="cypress" />
-import data from "../fixtures/data.json";
-import loginPage from "../fixtures/loginPage.json";
-import activeOrganizationMainBoard from "../fixtures/activeOrganizationsMainBoard.json";
+import authLogin from "../models/loginModule";
+import authCreateOrg from "../models/organizationModule";
+import authBoard from "../models/boardModule";
 import commonData from "../fixtures/commonData.json";
-import activeBoardMainPanel from "../fixtures/activeBoardMainPanel.json";
-import boardPanel from "../fixtures/boardPanel.json";
-import tasks from "../fixtures/tasks.json";
-import boardSettingsMenu from "../fixtures/boardSettingsMenu.json";
-import organizationSettingsMenu from "../fixtures/organizationSettingsMenu.json";
-import navigation from "../fixtures/navigation.json";
+import data from "../fixtures/data.json";
 import dataFromRegister from "../fixtures/dataFromRegister.json";
 
 describe("New board", () => {
   before("Login to app", () => {
     cy.intercept("/api/v2/common").as("login");
     cy.visit("/");
-    cy.get(loginPage.emailInput).clear().type(dataFromRegister.newUserEmail);
-    cy.get(loginPage.passwordInput).clear().type(data.newUser.newPasswordValid);
-    cy.get(loginPage.loginButton).click();
+    cy.login();
     cy.wait("@login").then((res) => {
       expect(res.response.statusCode).to.eq(200);
     });
   });
+  after("logout", () => {
+    cy.logout();
+  });
 
   it("valid new organization create", () => {
     cy.intercept("/api/v2/organizations").as("createOrganization");
-    cy.get(activeOrganizationMainBoard.addNewOrganization).click({
-      force: true,
-    });
-    cy.get(activeOrganizationMainBoard.newOrganizationNameInput)
-      .clear()
-      .type(commonData.validData.testName);
-    cy.get(activeOrganizationMainBoard.buttonNext).click();
-    cy.get(activeOrganizationMainBoard.buttonNext).click();
-    if (activeOrganizationMainBoard.okButton) {
-      cy.get(activeOrganizationMainBoard.okButton).click();
-    }
+    authCreateOrg.createOrganization({});
     cy.wait("@createOrganization").then((res) => {
       expect(res.response.statusCode).to.eq(200);
-      expect(res.response.body.users[0].company_name).to.eq(
-        data.newUser.companyName
-      );
       expect(res.response.body.users[0].email).to.eq(
         dataFromRegister.newUserEmail
-      );
-      expect(res.response.body.users[0].full_name).to.eq(
-        data.newUser.full_name
       );
     });
   });
 
   context("Test New Board Creation - name", () => {
     it("only spaces in name", () => {
-      cy.get(activeOrganizationMainBoard.addNewBoardButton).click();
+      // cy.get(".vs-c-my-organization__body > p:nth-of-type(2)").click();
+      // cy.get("#Your App: 'domaci'")
+      //   .iframe()
+      //   .find(
+      //     'button[class="vs-c-btn vs-c-btn--primary vs-c-btn--lg vs-u-font-sm vs-c-modal--features-confirm-button"]'
+      //   )
+      //   .should("contain", "OK")
+      //   .click();
+      // cy.get("iframe").iframe2(() => {
+      //   cy.get("button").click();
+      // });
+      // const getIframeDocument = () => {
+      //   return cy.get("iframe").eq(2).its("0.contentDocument");
+      // };
+
+      // const getIframeBody = () => {
+      //   return getIframeDocument()
+      //     .its("body")
+      //     .should("not.be.undefined")
+      //     .then(cy.wrap);
+      // };
+      // getIframeBody().find("button").contains("OK").click({ force: true });
       cy.get(
-        activeBoardMainPanel.newBoardCreatePanel.organizationDropDownMenu
+        ".vs-c-btn.vs-c-btn--lg.vs-c-btn--primary.vs-c-modal--features-confirm-button.vs-u-font-sm",
+        { timeout: 3000 }
       ).click({ force: true });
-      cy.get(
-        activeBoardMainPanel.newBoardCreatePanel
-          .organizationDropDownMenuChoiceOne
-      ).click();
-      cy.get(activeBoardMainPanel.newBoardCreatePanel.boardTitleNameInput)
-        .clear()
-        .type(commonData.negativeData.onlySpaces);
-      cy.get(activeBoardMainPanel.newBoardCreatePanel.nextButton).click({
-        force: true,
-      });
+      cy.wait(1000);
+      authBoard.createBoard({ name: commonData.negativeData.onlySpaces });
     });
     it("script code in name", () => {
-      cy.get(activeBoardMainPanel.newBoardCreatePanel.boardTitleNameInput)
-        .clear()
-        .type(commonData.negativeData.scriptCodeInjection);
-      cy.get(activeBoardMainPanel.newBoardCreatePanel.nextButton).click({
-        force: true,
+      authBoard.createBoard({
+        name: commonData.negativeData.scriptCodeInjection,
       });
-      cy.get(activeBoardMainPanel.newBoardCreatePanel.backButton).click();
     });
-    it("257 character in name", () => {
-      cy.get(activeBoardMainPanel.newBoardCreatePanel.boardTitleNameInput)
-        .clear()
-        .type(commonData.negativeData.tooLongString257);
-      cy.get(activeBoardMainPanel.newBoardCreatePanel.nextButton).click({
-        force: true,
-      });
-      cy.get(activeBoardMainPanel.newBoardCreatePanel.backButton).click();
+    it("256 character in name", () => {
+      authBoard.createBoard({ name: commonData.negativeData.tooLongString256 });
     });
     it("valid name + scrum", () => {
       cy.intercept("/api/v2/boards").as("newBoard");
