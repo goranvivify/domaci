@@ -10,6 +10,7 @@ describe("Api testing", () => {
   let allOrganizations;
   let boardId;
   let boardCode;
+  let allBoards;
   before(() => {
     userApi
       .login({ testMessage: "01-Login before other tests" })
@@ -18,8 +19,19 @@ describe("Api testing", () => {
       });
   });
   after("Delete all organizations", () => {
+    allBoards.forEach((el) =>
+      boardApi.delete({
+        token: userToken,
+        boardId: el.id,
+        testMessage: "All boards deleted successfully",
+      })
+    );
     allOrganizations.forEach((el) =>
-      organizationApi.delete({ token: userToken, organizationId: el.id })
+      organizationApi.delete({
+        token: userToken,
+        organizationId: el.id,
+        testMessage: "All organizations deleted successfully",
+      })
     );
   });
   it("Create organization", () => {
@@ -129,6 +141,12 @@ describe("Api testing", () => {
       .then((response) => {
         console.log(response);
       });
+  });
+  it("Get all boards", () => {
+    boardApi.get({ token: userToken }).then((response) => {
+      console.log(response);
+      allBoards = response;
+    });
   });
   it("Get all organizations", () => {
     organizationApi.get({ token: userToken }).then((response) => {
