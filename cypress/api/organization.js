@@ -11,7 +11,6 @@ module.exports = {
         },
       })
       .then((response) => {
-        console.log(response);
         expect(response.status).to.eq(statusCode);
         return response.body;
       });
@@ -41,7 +40,6 @@ module.exports = {
               `${testMessage} - Fail - ${JSON.stringify(response)}`,
               "error"
             );
-        console.log(response);
         expect(response.status).to.eq(statusCode);
         return response.body;
       });

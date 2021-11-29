@@ -18,17 +18,6 @@ describe("Api testing", () => {
     allOrganizations.forEach((el) =>
       organizationApi.delete({ token: userToken, organizationId: el.id })
     );
-    // for (var i = 0; i < allOrganizations.length; i++) {
-    //   organizationApi
-    //     .delete({
-    //       token: userToken,
-    //       testMessage: "05-All organizations deleted successfuly",
-    //       organizationId: allOrganizations[i].id,
-    //     })
-    //     .then((response) => {
-    //       console.log(response);
-    //     });
-    // }
   });
   it("Empty organization name", () => {
     organizationApi.post({

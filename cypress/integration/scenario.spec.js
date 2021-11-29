@@ -36,36 +36,25 @@ describe("Api testing", () => {
         testMessage: "02-Organization created successfuly",
       })
       .then((response) => {
-        // console.log(response);
         organizationId = response.id;
-        // console.log(organizationId);
       });
   });
   it("Edit organization", () => {
-    organizationApi
-      .put({
-        token: userToken,
-        testMessage: "03-Organization edited successfuly",
-        organizationId: organizationId,
-      })
-      .then((response) => {
-        console.log(response);
-      });
+    organizationApi.put({
+      token: userToken,
+      testMessage: "03-Organization edited successfuly",
+      organizationId: organizationId,
+    });
   });
   it("Delete organization", () => {
-    organizationApi
-      .delete({
-        token: userToken,
-        testMessage: "04-Organization deleted successfuly",
-        organizationId: organizationId,
-      })
-      .then((response) => {
-        console.log(response);
-      });
+    organizationApi.delete({
+      token: userToken,
+      testMessage: "04-Organization deleted successfuly",
+      organizationId: organizationId,
+    });
   });
   it("Get all organizations", () => {
     organizationApi.get({ token: userToken }).then((response) => {
-      console.log(response);
       allOrganizations = response;
     });
   });

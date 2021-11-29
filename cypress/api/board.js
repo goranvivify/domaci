@@ -12,7 +12,6 @@ module.exports = {
         },
       })
       .then((response) => {
-        console.log(response);
         expect(response.status).to.eq(statusCode);
         return response.body;
       });
@@ -47,7 +46,6 @@ module.exports = {
               `${testMessage} - Fail - ${JSON.stringify(response)}`,
               "error"
             );
-        console.log(response);
         expect(response.status).to.eq(statusCode);
         return response;
       });
@@ -87,21 +85,12 @@ module.exports = {
         return response.body;
       });
   },
-  delete({
-    boardId = "",
-    token = "",
-    statusCode = 200,
-    testMessage = "",
-    // password = "pobra11",
-  }) {
+  delete({ boardId = "", token = "", statusCode = 200, testMessage = "" }) {
     return cy
       .request({
         failOnStatusCode: false,
         method: "DELETE",
         url: `https://cypress-api.vivifyscrum-stage.com/api/v2/boards/${boardId}`,
-        // body: {
-        //   passwordOrEmail: password,
-        // },
         headers: {
           Authorization: `Bearer ${token}`,
         },

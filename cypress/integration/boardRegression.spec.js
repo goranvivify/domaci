@@ -23,14 +23,14 @@ describe("Api testing", () => {
       boardApi.delete({
         token: userToken,
         boardId: el.id,
-        testMessage: "All boards deleted successfully",
+        testMessage: "11-All boards deleted successfully",
       })
     );
     allOrganizations.forEach((el) =>
       organizationApi.delete({
         token: userToken,
         organizationId: el.id,
-        testMessage: "All organizations deleted successfully",
+        testMessage: "12-All organizations deleted successfully",
       })
     );
   });
@@ -41,7 +41,6 @@ describe("Api testing", () => {
         testMessage: "02-Organization created successfuly",
       })
       .then((response) => {
-        console.log(response);
         organizationId = response.id;
       });
   });
@@ -52,9 +51,9 @@ describe("Api testing", () => {
         token: userToken,
         organizationId: organizationId,
         statusCode: 400,
+        testMessage: "03-256 characters in name",
       })
       .then((response) => {
-        console.log(response);
         boardId = response.body.id;
       });
   });
@@ -65,9 +64,9 @@ describe("Api testing", () => {
         token: userToken,
         organizationId: organizationId,
         statusCode: 400,
+        testMessage: "04-Only spaces in name",
       })
       .then((response) => {
-        console.log(response);
         boardId = response.body.id;
       });
   });
@@ -78,9 +77,9 @@ describe("Api testing", () => {
         token: userToken,
         organizationId: organizationId,
         statusCode: 400,
+        testMessage: "05-Script code in name",
       })
       .then((response) => {
-        console.log(response);
         boardId = response.body.id;
       });
   });
@@ -88,17 +87,15 @@ describe("Api testing", () => {
     boardApi
       .post({
         token: userToken,
-        testMessage: "03-Board created successfuly",
+        testMessage: "06-Board created successfuly",
         organizationId: organizationId,
       })
       .then((response) => {
-        console.log(response);
         boardId = response.body.id;
       });
   });
   it("GET boards", () => {
     boardApi.get({ token: userToken, boardId: boardId }).then((res) => {
-      console.log(res);
       boardCode = res.code;
     });
   });
@@ -106,9 +103,9 @@ describe("Api testing", () => {
     boardApi.put({
       boardId: boardId,
       token: userToken,
-      testMessage: "04-Board name edited",
+      testMessage: "07-Board name edited",
       boardCode: boardCode,
-      description: "DESCRIPTION text here",
+      description: commonData.validData.description,
     });
   });
   it("NEG Edit board's name - 256 characters", () => {
@@ -119,6 +116,7 @@ describe("Api testing", () => {
       boardCode: boardCode,
       description: null,
       statusCode: 400,
+      testMessage: "08-256 characters in board name",
     });
   });
   it("NEG Edit board's name - script code", () => {
@@ -129,28 +127,23 @@ describe("Api testing", () => {
       boardCode: boardCode,
       description: null,
       statusCode: 400,
+      testMessage: "09-Script code in board name",
     });
   });
   it("Delete board", () => {
-    boardApi
-      .delete({
-        token: userToken,
-        testMessage: "05-Board deleted successfuly",
-        boardId: boardId,
-      })
-      .then((response) => {
-        console.log(response);
-      });
+    boardApi.delete({
+      token: userToken,
+      testMessage: "10-Board deleted successfuly",
+      boardId: boardId,
+    });
   });
   it("Get all boards", () => {
     boardApi.get({ token: userToken }).then((response) => {
-      console.log(response);
       allBoards = response;
     });
   });
   it("Get all organizations", () => {
     organizationApi.get({ token: userToken }).then((response) => {
-      console.log(response);
       allOrganizations = response;
     });
   });

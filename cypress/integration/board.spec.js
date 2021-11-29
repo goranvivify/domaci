@@ -2,6 +2,7 @@
 import userApi from "../api/user";
 import organizationApi from "../api/organization";
 import boardApi from "../api/board";
+import commonData from "../fixtures/commonData.json";
 
 describe("Api testing", () => {
   let userToken;
@@ -28,7 +29,6 @@ describe("Api testing", () => {
         testMessage: "02-Organization created successfuly",
       })
       .then((response) => {
-        console.log(response);
         organizationId = response.id;
       });
   });
@@ -40,13 +40,11 @@ describe("Api testing", () => {
         organizationId: organizationId,
       })
       .then((response) => {
-        console.log(response);
         boardId = response.body.id;
       });
   });
   it("GET boards", () => {
     boardApi.get({ token: userToken, boardId: boardId }).then((res) => {
-      console.log(res);
       boardCode = res.code;
     });
   });
@@ -56,23 +54,18 @@ describe("Api testing", () => {
       token: userToken,
       testMessage: "04-Board name edited",
       boardCode: boardCode,
-      description: "DESCRIPTION text here",
+      description: commonData.validData.description,
     });
   });
   it("Delete board", () => {
-    boardApi
-      .delete({
-        token: userToken,
-        testMessage: "05-Board deleted successfuly",
-        boardId: boardId,
-      })
-      .then((response) => {
-        console.log(response);
-      });
+    boardApi.delete({
+      token: userToken,
+      testMessage: "05-Board deleted successfuly",
+      boardId: boardId,
+    });
   });
   it("Get all organizations", () => {
     organizationApi.get({ token: userToken }).then((response) => {
-      console.log(response);
       allOrganizations = response;
     });
   });
