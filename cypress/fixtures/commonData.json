@@ -6,6 +6,7 @@
     },
     "validData": {
         "testName": "TEST NAME",
-        "editedName": "EDITED TEST NAME"
+        "editedName": "EDITED TEST NAME",
+        "description": "DESCRIPTION text here"
     }
 }

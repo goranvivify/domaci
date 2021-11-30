@@ -1,10 +1,10 @@
 /// <reference types="cypress" />
 
-import registerPage from "../fixtures/registerPage.json";
-import data from "../fixtures/data.json";
-import validationGetters from "../fixtures/validationGetters.json";
-import validations from "../fixtures/validations.json";
-import authRegister from "../models/registerModule";
+import registerPage from "../../fixtures/registerPage.json";
+import data from "../../fixtures/data.json";
+import validationGetters from "../../fixtures/validationGetters.json";
+import validations from "../../fixtures/validations.json";
+import authRegister from "../../models/registerModule";
 import faker from "faker";
 function randomString(length) {
   var result = "";
