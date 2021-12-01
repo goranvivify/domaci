@@ -16,6 +16,21 @@ module.exports = {
         return response.body;
       });
   },
+  getAll({ token = "", organizationId = "", statusCode = 200 }) {
+    return cy
+      .request({
+        failOnStatusCode: false,
+        method: "GET",
+        url: `https://cypress-api.vivifyscrum-stage.com/api/v2/organizations/${organizationId}/boards-data`,
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then((response) => {
+        expect(response.status).to.eq(statusCode);
+        return response.body;
+      });
+  },
   post({
     boardName = faker.animal.lion(),
     organizationId = "",

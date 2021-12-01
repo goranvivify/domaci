@@ -138,9 +138,11 @@ describe("Api testing", () => {
     });
   });
   it("Get all boards", () => {
-    boardApi.get({ token: userToken }).then((response) => {
-      allBoards = response;
-    });
+    boardApi
+      .getAll({ token: userToken, organizationId: organizationId })
+      .then((response) => {
+        allBoards = response;
+      });
   });
   it("Get all organizations", () => {
     organizationApi.get({ token: userToken }).then((response) => {
